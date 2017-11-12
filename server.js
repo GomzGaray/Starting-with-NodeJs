@@ -8,6 +8,9 @@ var app = express();
 // Setting environment port or setting one by default
 var port = process.env.PORT || 3000;
 
+// Getting config file
+var config = require('./config');
+
 // Retrieving all product routes as a function
 productRoutes = require('./routes/productRoutes')(express);
 
@@ -20,7 +23,7 @@ app.get('/', function(request, response){
 });
 
 // Creating connection with database
-var mongoDb = mongoose.connect('mongodb://localhost/computershop', { useMongoClient: true, }, function (dberror){
+var mongoDb = mongoose.connect(config.database, { useMongoClient: true, }, function (dberror){
     // Checking if error ocurred connecting to db
     if( dberror ){
         console.log('Could not establish a database connection: ' + dberror);
