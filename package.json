@@ -1,0 +1,22 @@
+{
+  "name": "computer-shop",
+  "version": "1.0.0",
+  "description": "Computer shop with angularjs and nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GomzGaray/computer-shop.git"
+  },
+  "author": "Herberth Gomez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GomzGaray/computer-shop/issues"
+  },
+  "homepage": "https://github.com/GomzGaray/computer-shop#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
