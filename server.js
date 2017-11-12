@@ -8,6 +8,12 @@ var app = express();
 // Setting environment port or setting one by default
 var port = process.env.PORT || 3000;
 
+// Retrieving all product routes as a function
+productRoutes = require('./routes/productRoutes')(express);
+
+// Setting up API endpoints
+app.use('/api/Products', productRoutes);
+
 // Home page
 app.get('/', function(request, response){
     response.send('Welcome!!');
