@@ -2,7 +2,7 @@
 var products = require('./../controllers/productsController');
 
 // Routes definition for all products request
-var productRoutes = function (server) {
+var productRoutes = function (server, middleware) {
     // Router creation
     var productRouter = server.Router();
 
@@ -11,14 +11,14 @@ var productRoutes = function (server) {
         // Get All products
         .get(products.findAllProducts)
         // Add a new product
-        .post(products.addProduct);
+        .post(middleware.checkIsAdmin, products.addProduct);
 
     // Products by identifier
     productRouter.route('/:id')
         // Get specific one
         .get(products.findProductById)
         // Removing product
-        .delete(products.removeProductById);
+        .delete(middleware.checkIsAdmin, products.removeProductById);
 
     return productRouter;
 };

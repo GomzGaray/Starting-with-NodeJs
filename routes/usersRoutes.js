@@ -2,7 +2,7 @@
 var users = require('./../controllers/usersController')
 
 // Definition of all products routes related
-var userRoutes = function(server){
+var userRoutes = function(server, middleware){
 
     // Router creation
     var userRoutes = server.Router();
@@ -13,7 +13,6 @@ var userRoutes = function(server){
     userRoutes.route('/login').post(users.signIn);
 
     return userRoutes;
-
 }
 
 // Sharing user routes

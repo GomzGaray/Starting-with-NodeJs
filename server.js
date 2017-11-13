@@ -6,6 +6,8 @@ var express    = require('express'),
 
 // Getting config file
 var config = require('./config');
+// Getting middleware
+var middleware = require('./services/middleware');
 
 // Server creation
 var app = express();
@@ -21,9 +23,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 // Retrieving all product routes as a function
-productRoutes = require('./routes/productRoutes')(express);
+productRoutes = require('./routes/productRoutes')(express, middleware);
 // Routes for users management
-userRoutes = require('./routes/usersRoutes')(express);
+userRoutes = require('./routes/usersRoutes')(express, middleware);
 
 // Setting up API endpoints
 app.use('/api/Products', productRoutes);

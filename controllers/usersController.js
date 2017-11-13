@@ -68,7 +68,7 @@ exports.signIn = function (request, response) {
             // Checking if passwords match
             if( bcrypt.compareSync(request.body.password, user.password) ){
                 // Creating payload
-                var payload = { isAdmin : user.isAdmin };
+                var payload = { isAdmin : user.isAdmin, userId : user._id };
                 // Creating token
                 var token = jwt.sign(payload, config.csToken, {
                     expiresIn : 18000 // expires in 5 hours
