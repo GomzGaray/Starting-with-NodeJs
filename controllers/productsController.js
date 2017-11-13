@@ -3,6 +3,8 @@ var mongoose = require('mongoose');
 
 // Products model
 var Products = require('./../models/productModel');
+// ProductsHistory model
+var ProductsHistory = require('./../models/productHistoryModel');
 
 // Getting all products 
 exports.findAllProducts = function (request, response) {
@@ -24,8 +26,8 @@ exports.findAllProducts = function (request, response) {
 
 
 // Get product by Identifier
-exports.findProductById = function (req, resp) {
-    Products.findById( req.params.id, function( err, prod ) {
+exports.findProductById = function (request, resp) {
+    Products.findById( request.params.id, function( err, prod ) {
         if (err){
             resp.status(500).send(err);
         } else if( prod ) {
@@ -38,21 +40,33 @@ exports.findProductById = function (req, resp) {
 
 
 // Add a new product
-exports.addProduct = function (req, resp) {
-    var product = new Products(req.body);
+exports.addProduct = function (request, resp) {
+    var product = new Products(request.body);
     product.save( function (error){
         if (error){
             resp.status(500).send(error);
         } else {
-            resp.status(201).send(product);
+            var prodHistory = new ProductsHistory ({
+                productId: product._id,
+                amount: product.amount,
+                price: product.price,
+                userId : resp.decoded.userId,
+            });
+            prodHistory.save(function(err){
+                if (err){
+                    resp.status(500).send(err);
+                } else {
+                    resp.status(201).send(product);
+                }
+            });
         }
     });
 };
 
 
 // Get product by Identifier
-exports.removeProductById = function (req, resp) {
-    Products.findById( req.params.id, function( err, prod ) {
+exports.removeProductById = function (request, resp) {
+    Products.findById( request.params.id, function( err, prod ) {
         if (err){
             resp.status(500).send(err);
         } else if( prod ) {
