@@ -3,7 +3,6 @@ var mongoose = require('mongoose'),
     Likes = require('./../models/likingModel');
 
 exports.likeUnlikeProduct = function(request, response){
-    var filter = {};
     Likes.findOne({
         productId : request.body.productId,
         userId : response.decoded.userId
@@ -39,6 +38,12 @@ exports.likeUnlikeProduct = function(request, response){
     });
 };
 
-exports.likesByProduct = function(request, response){
-
+exports.likesNumberByProduct = function(request, response){
+    Likes.count({productId : request.params.productId},function (err, likes){
+        if (err){
+            response.status(500).send({ success : false, message : err });
+        } else {
+            response.status(201).send({ success : false, message : likes });
+        }
+    });
 };

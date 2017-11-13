@@ -7,6 +7,8 @@ var likesRoutes = function (server, middleware){
     
         // Like routes definitions
         likeRouter.route('/')
+            // Getting the numebr of likes for a product
+            .get(likes.likesNumberByProduct)
             // Single post to like - unlike - relike a product
             .post(middleware.checkLoggedIn, likes.likeUnlikeProduct);
     
