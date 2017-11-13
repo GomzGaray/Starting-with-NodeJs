@@ -1,0 +1,19 @@
+<html ng-app="computershopApp">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+        <script src="js/core.js"></script>
+
+        <meta charset="utf-8">
+        <title>All Products list</title>
+    </head>
+
+    <h1>Products availables</h1>
+
+    <body ng-controller="ProductsListController">
+        <ul>
+            <li ng-repeat="product in products">
+                <span>{{product}}</span>
+            </li>
+        </ul>
+    </body>
+</html>

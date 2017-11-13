@@ -1,7 +1,8 @@
 // Module dependencies
 var express    = require('express'),
     mongoose   = require('mongoose'),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
+    path       = require('path');
 
 
 // Getting config file
@@ -22,6 +23,9 @@ app.set('superSecret', config.csToken);
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
+// Enabling angular use its files under app folder
+app.use(express.static('./app'));
+
 // Retrieving all product routes as a function
 productRoutes = require('./routes/productRoutes')(express, middleware);
 // Routes for users management
@@ -34,7 +38,7 @@ app.use('/auth', userRoutes);
 
 // Home page
 app.get('/', function(request, response){
-    response.send('Welcome!!');
+    response.sendFile(path.join(__dirname, './app', 'index.html'));
 });
 
 // Creating connection with database
