@@ -1,10 +1,8 @@
 // Dependencies
-var mongoose = require('mongoose');
+var mongoose        = require('mongoose'),
+    Products        = require('./../models/productModel'),
+    ProductsHistory = require('./../models/productHistoryModel');
 
-// Products model
-var Products = require('./../models/productModel');
-// ProductsHistory model
-var ProductsHistory = require('./../models/productHistoryModel');
 
 // Getting all products 
 exports.findAllProducts = function (request, response) {
@@ -38,6 +36,27 @@ exports.findProductById = function (request, resp) {
     });
 };
 
+// Get product by Identifier
+exports.removeProductById = function (request, resp) {
+    Products.findById( request.params.id, function( err, prod ) {
+        if (err){
+            resp.status(500).send(err);
+        } else if( prod ) {
+            prod.status = 'Deleted'
+            prod.save( function (error) {
+                if(error){
+                    resp.status(500).send('error removing' + error);
+                } else {
+                    resp.status(200).send(prod);
+                }
+            })
+            return resp.send( prod );
+        } else {
+            resp.status(404).send('Product not found');
+        }
+    });
+};
+
 
 // Add a new product
 exports.addProduct = function (request, resp) {
@@ -64,23 +83,44 @@ exports.addProduct = function (request, resp) {
 };
 
 
-// Get product by Identifier
-exports.removeProductById = function (request, resp) {
-    Products.findById( request.params.id, function( err, prod ) {
-        if (err){
+// Updating products
+exports.updateProducy = function (request, response){
+    // Getting product by its identifier
+    Products.findById( request.body.id, function( error, product ) {
+        if ( error ){
             resp.status(500).send(err);
-        } else if( prod ) {
-            prod.status = 'Deleted'
-            prod.save( function (error) {
-                if(error){
-                    resp.status(500).send('error removing' + error);
-                } else {
-                    resp.status(200).send(prod);
-                }
-            })
-            return resp.send( prod );
         } else {
-            resp.status(404).send('Product not found');
+            // Updating amount if is coming
+            if (request.body.amount) {
+                product.set({amount : request.body.amount})
+            // Updating price if is coming in request
+            } else if (request.body.price) {
+                product.set({price : request.body.price})
+            }
+            // Updating entry in database
+            product.save( function (err, updatedProd) {
+                if (err) {
+                    // sending error if exists
+                    response.status(500).send(err);
+                } else {
+                    // Creating a new record for the product history
+                    var prodHistory = new ProductsHistory ({
+                        productId: updatedProd._id,
+                        amount: updatedProd.amount,
+                        price: updatedProd.price,
+                        userId : resp.decoded.userId,
+                    });
+                    // Storing in the history table the change made
+                    prodHistory.save(function(historyError){
+                        if (historyError){
+                            resp.status(500).send(historyError);
+                        } else {
+                            // returning back the updated product
+                            resp.status(201).send(updatedProd);
+                        }
+                    });
+                }
+            });
         }
     });
 };

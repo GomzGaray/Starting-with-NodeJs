@@ -20,3 +20,19 @@
     font-size: 26px;
     font-weight: bold;
 }
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+
+/* ComputerShop styles */
+.form-login {
+    margin-left: 100px;
+}
+
+.login-title {
+    margin-top: 15px;
+    color: #337ab7;
+    margin-left: 60px;
+}

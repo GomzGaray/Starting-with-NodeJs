@@ -36,8 +36,8 @@ app.use('/api/Products', productRoutes);
 
 app.use('/auth', userRoutes);
 
-// Home page
-app.get('/', function(request, response){
+// Letting angular to handle all get request
+app.get('*', function(request, response){
     response.sendFile(path.join(__dirname, './app', 'index.html'));
 });
 

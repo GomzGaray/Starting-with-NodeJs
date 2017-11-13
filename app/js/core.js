@@ -1,5 +1,24 @@
-angular.module('computershopApp', [] )
-.controller('ProductsListController', function ($scope, $http){
+angular.module('computershopApp', ['ngRoute'] )
+// Routes handler in angular
+.config(function($routeProvider, $locationProvider){
+    $locationProvider.hashPrefix('');
+
+    $routeProvider
+        .when('/', {
+            templateUrl : 'views/productList.html',
+            controller  : 'ProductsCtrl'
+        })
+        .when('/login', {
+            templateUrl : 'views/login.html',
+            controller  : 'LoginCtrl'
+        })
+        .otherwise({
+            redirectTo: '/home'
+        });
+
+    $locationProvider.html5Mode({enable: true, requireBase: false});
+})
+.controller('ProductsCtrl', function ($scope, $http){
 
     $scope.formData = {};
 
@@ -18,4 +37,7 @@ angular.module('computershopApp', [] )
                 console.log('Error: ' + errorResponse);
             }
         );
+})
+.controller('LoginCtrl', function ($scope, $http){
+
 });
