@@ -11,6 +11,10 @@ exports.findAllProducts = function (request, response) {
     if (request.query.name) {
         filter.name = new RegExp(request.query.name, 'i');
     }
+    // Filter when want to get only active or deleted products
+    if (request.query.status) {
+        filter.status = new RegExp(request.query.status, 'i');
+    }
 
     // Searching in db and passing filter if exists
     Products.find(filter, function (error, prods) {
@@ -88,7 +92,7 @@ exports.updateProducy = function (request, response){
     // Getting product by its identifier
     Products.findById( request.body.id, function( error, product ) {
         if ( error ){
-            resp.status(500).send(err);
+            response.status(500).send(error);
         } else {
             // Updating amount if is coming
             if (request.body.amount) {
@@ -108,15 +112,15 @@ exports.updateProducy = function (request, response){
                         productId: updatedProd._id,
                         amount: updatedProd.amount,
                         price: updatedProd.price,
-                        userId : resp.decoded.userId,
+                        userId : response.decoded.userId,
                     });
                     // Storing in the history table the change made
                     prodHistory.save(function(historyError){
                         if (historyError){
-                            resp.status(500).send(historyError);
+                            response.status(500).send(historyError);
                         } else {
                             // returning back the updated product
-                            resp.status(201).send(updatedProd);
+                            response.status(201).send(updatedProd);
                         }
                     });
                 }

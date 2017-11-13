@@ -6,8 +6,8 @@ var mongoose = require('mongoose'),
 var likingModel = new Schema({
     productId : { type: String, required: true },
     userId    : { type: String, required: true },
-    likedDate : { type: String, required: true },
-    status    : { type: String, enum: ['Liked','Unliked']}
+    likedDate : { type: Date, required: true, default : Date.now() },
+    status    : { type: String, enum: ['Liked','Unliked'], default : 'Liked'}
 });
 
 // Exporting LikingModel definition
