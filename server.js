@@ -30,11 +30,14 @@ app.use(express.static('./app'));
 productRoutes = require('./routes/productRoutes')(express, middleware);
 // Routes for users management
 userRoutes = require('./routes/usersRoutes')(express, middleware);
-
+// Routes for liking
 likesRoutes = require('./routes/likingRoutes')(express, middleware);
+// Routes for purshases operations
+pushaseRoutes = require('./routes/purshaseRoutes')(express, middleware);
 
 // Setting up API endpoints
 app.use('/api/Products', productRoutes);
+app.use('/api/pushase', pushaseRoutes);
 app.use('/api/like', likesRoutes);
 
 app.use('/auth', userRoutes);

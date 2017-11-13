@@ -9,5 +9,5 @@ var invoiceModel = new Schema({
     total: { type: Number, required: true }
 });
 
-// Exporting ProductModel definition
+// Exporting Invoice definition
 module.exports = mongoose.model('invoice', invoiceModel);

@@ -11,7 +11,10 @@ var productRoutes = function (server, middleware) {
         // Get All products
         .get(products.findAllProducts)
         // Add a new product
-        .post(middleware.checkIsAdmin, products.addProduct);
+        .post(middleware.checkIsAdmin, products.addProduct)
+        // Update existing products
+        .put(middleware.checkIsAdmin, products.updateProduct);
+
 
     // Products by identifier
     productRouter.route('/:id')

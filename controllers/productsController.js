@@ -8,12 +8,12 @@ var mongoose        = require('mongoose'),
 exports.findAllProducts = function (request, response) {
     var filter = {};
     // if filter name added in query then filtering
-    if (request.query.name) {
-        filter.name = new RegExp(request.query.name, 'i');
+    if (request.params.name) {
+        filter.name = new RegExp(request.params.name, 'i');
     }
     // Filter when want to get only active or deleted products
-    if (request.query.status) {
-        filter.status = new RegExp(request.query.status, 'i');
+    if (request.params.status) {
+        filter.status = request.params.status;
     }
 
     // Searching in db and passing filter if exists
@@ -73,7 +73,7 @@ exports.addProduct = function (request, resp) {
                 productId: product._id,
                 amount: product.amount,
                 price: product.price,
-                userId : resp.decoded.userId,
+                userId : resp.decoded.userId
             });
             prodHistory.save(function(err){
                 if (err){
@@ -88,7 +88,7 @@ exports.addProduct = function (request, resp) {
 
 
 // Updating products
-exports.updateProducy = function (request, response){
+exports.updateProduct = function (request, response){
     // Getting product by its identifier
     Products.findById( request.body.id, function( error, product ) {
         if ( error ){
@@ -112,7 +112,7 @@ exports.updateProducy = function (request, response){
                         productId: updatedProd._id,
                         amount: updatedProd.amount,
                         price: updatedProd.price,
-                        userId : response.decoded.userId,
+                        userId : response.decoded.userId
                     });
                     // Storing in the history table the change made
                     prodHistory.save(function(historyError){
