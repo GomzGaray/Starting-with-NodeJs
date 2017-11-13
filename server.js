@@ -1,12 +1,17 @@
 // Module dependencies
-var express  = require('express'),
-    mongoose = require('mongoose');
+var express    = require('express'),
+    mongoose   = require('mongoose'),
+    bodyParser = require('body-parser');
 
 // Server creation
 var app = express();
 
 // Setting environment port or setting one by default
 var port = process.env.PORT || 3000;
+
+// using body parser to easy json handling
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
 
 // Getting config file
 var config = require('./config');

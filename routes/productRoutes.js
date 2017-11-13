@@ -9,7 +9,16 @@ var productRoutes = function (server) {
     // Products routes definitions
     productRouter.route('/')
         // Get All products
-        .get(products.findAllProducts);
+        .get(products.findAllProducts)
+        // Add a new product
+        .post(products.addProduct);
+
+    // Products by identifier
+    productRouter.route('/:id')
+        // Get specific one
+        .get(products.findProductById)
+        // Removing product
+        .delete(products.removeProductById);
 
     return productRouter;
 };
