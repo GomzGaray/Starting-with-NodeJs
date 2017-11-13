@@ -10,6 +10,7 @@ Computer-Shop
 
 ## Running ComputerShop
 
-- Before to run computershop application make sure your mongo db is running
-- Then type the following command in the project root folder:
-`npm start`
+1. Before to run computershop application make sure your mongo db is running
+2. Go to the root directory
+3. Here we need to download the project dependencies, let's run the command `npm install`
+4. Then type the following command: `npm start` to start the server instance

@@ -2,18 +2,23 @@
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
         <script src="js/core.js"></script>
-
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="content/style.css">
         <meta charset="utf-8">
         <title>All Products list</title>
     </head>
 
-    <h1>Products availables</h1>
+    <body>
+        <div ng-include="'views/_header.html'" ></div>
+        <h1>Hey there</h1>
 
-    <body ng-controller="ProductsListController">
-        <ul>
-            <li ng-repeat="product in products">
-                <span>{{product}}</span>
-            </li>
-        </ul>
+        <div ng-controller="ProductsListController">
+            <ul>
+                <li ng-repeat="product in products">
+                    <span>{{product}}</span>
+                </li>
+            </ul>
+        </div>
     </body>
 </html>

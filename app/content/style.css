@@ -1,0 +1,22 @@
+/* Override bootstrap css */
+.navbar-inverse {
+    background-color: #0095ff;
+    border-color: #337ab7;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: #006cf1;
+}
+
+.navbar-brand {
+    font-size: 26px;
+    font-weight: bold;
+}
