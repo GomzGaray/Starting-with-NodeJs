@@ -28,7 +28,7 @@ exports.findAllProducts = function (request, response) {
 
 // Get product by Identifier
 exports.findProductById = function (request, resp) {
-    Products.findById( request.query.id, function( err, prod ) {
+    Products.findById( request.params.id, function( err, prod ) {
         if (err){
             resp.status(500).send(err);
         } else if( prod ) {
@@ -41,7 +41,7 @@ exports.findProductById = function (request, resp) {
 
 // Get product by Identifier
 exports.removeProductById = function (request, resp) {
-    Products.findById( request.query.id, function( err, prod ) {
+    Products.findById( request.params.id, function( err, prod ) {
         if (err){
             resp.status(500).send(err);
         } else if( prod ) {

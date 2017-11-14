@@ -1,0 +1,168 @@
+{
+	"id": "30a85e4e-2688-14cd-8198-bd8653f4dcba",
+	"name": "Authentication and Login",
+	"description": "For registering and login",
+	"order": [
+		"04b9740e-ebda-bf83-b11c-5fb3a6f7a0eb",
+		"8c5212da-3e9a-a808-f202-52525cc3c0b4",
+		"fd1e0b5e-3b23-2782-6a08-0b2e22edecbb",
+		"366e95ee-f35d-798a-2cc9-95cde0fc5579",
+		"ed32a2bc-5404-a55d-ce68-c911e65c135a"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1510539051349,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "04b9740e-ebda-bf83-b11c-5fb3a6f7a0eb",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://computer-shop.herokuapp.com/auth/signup",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510675164266,
+			"name": "Registering normal user",
+			"description": "Register a new user",
+			"collectionId": "30a85e4e-2688-14cd-8198-bd8653f4dcba",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\" : \"user@gomez.com\",\n\t\"password\" : \"password\",\n\t\"name\" : \"normal user\"\n}"
+		},
+		{
+			"id": "366e95ee-f35d-798a-2cc9-95cde0fc5579",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://computer-shop.herokuapp.com/auth/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510675311748,
+			"name": "Login with normal user",
+			"description": "Login example",
+			"collectionId": "30a85e4e-2688-14cd-8198-bd8653f4dcba",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\" : \"user@gomez.com\",\n\t\"password\" : \"password\"\n}"
+		},
+		{
+			"id": "8c5212da-3e9a-a808-f202-52525cc3c0b4",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://computer-shop.herokuapp.com/auth/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510675300129,
+			"name": "Login with bad credentials",
+			"description": "Login example",
+			"collectionId": "30a85e4e-2688-14cd-8198-bd8653f4dcba",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\" : \"user@gomez.com\",\n\t\"password\" : \"password1\"\n}"
+		},
+		{
+			"id": "ed32a2bc-5404-a55d-ce68-c911e65c135a",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://computer-shop.herokuapp.com/auth/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510675325595,
+			"name": "Login with as Admin user",
+			"description": "Login as admin user",
+			"collectionId": "30a85e4e-2688-14cd-8198-bd8653f4dcba",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\" : \"admin@gomez.com\",\n\t\"password\" : \"rootPassword\"\n}"
+		},
+		{
+			"id": "fd1e0b5e-3b23-2782-6a08-0b2e22edecbb",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://computer-shop.herokuapp.com/auth/signup",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510675185137,
+			"name": "Registering admin user",
+			"description": "Register a new admin user",
+			"collectionId": "30a85e4e-2688-14cd-8198-bd8653f4dcba",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\" : \"admin@gomez.com\",\n\t\"password\" : \"rootPassword\",\n\t\"name\" : \"Administrator\",\n\t\"isAdmin\" : true\n}"
+		}
+	]
+}

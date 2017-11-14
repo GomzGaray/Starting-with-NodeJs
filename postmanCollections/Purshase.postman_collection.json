@@ -1,0 +1,52 @@
+{
+	"id": "201b4be5-9c96-a3d9-dfb9-f9a69ae9df7a",
+	"name": "Purshase",
+	"description": "",
+	"order": [
+		"fc8ea8ec-d56d-2cee-ab42-38fa1d461692"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1510617116906,
+	"owner": 0,
+	"public": false,
+	"hasRequests": true,
+	"requests": [
+		{
+			"id": "fc8ea8ec-d56d-2cee-ab42-38fa1d461692",
+			"headers": "Content-Type: application/json\nx-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc0FkbWluIjp0cnVlLCJ1c2VySWQiOiI1YTBiMTFlY2ZlNzM1MzAwMTQ5NTM3ZjgiLCJpYXQiOjE1MTA2NzUwNjgsImV4cCI6MTUxMDY5MzA2OH0.8XKFJfgH40bza61W3KK0dDGtwuM6n3hQOlR82SIwYDs\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-access-token",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc0FkbWluIjp0cnVlLCJ1c2VySWQiOiI1YTBiMTFlY2ZlNzM1MzAwMTQ5NTM3ZjgiLCJpYXQiOjE1MTA2NzUwNjgsImV4cCI6MTUxMDY5MzA2OH0.8XKFJfgH40bza61W3KK0dDGtwuM6n3hQOlR82SIwYDs",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://computer-shop.herokuapp.com/api/pushase/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510677789238,
+			"name": "Buying two products",
+			"description": "",
+			"collectionId": "201b4be5-9c96-a3d9-dfb9-f9a69ae9df7a",
+			"responses": [],
+			"rawModeData": "{\n\t\"total\" : 18.60,\n\t\"details\" : [\n\t\t{\n\t\t\t\"productId\" : \"5a0b1586fe735300149537ff\",\n\t\t\t\"amount\" : 2,\n\t\t\t\"price\" : 5\n\t\t},{\n\t\t\t\"productId\" : \"5a0b1647fe7353001495380b\",\n\t\t\t\"amount\" : 2,\n\t\t\t\"price\" : 4.3\n\t\t}\n\t]\n}"
+		}
+	]
+}

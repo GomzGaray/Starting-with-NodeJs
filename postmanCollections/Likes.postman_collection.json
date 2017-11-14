@@ -1,0 +1,51 @@
+{
+	"id": "e33a2214-d51a-fa30-c59e-f428cbf21968",
+	"name": "Likes",
+	"description": "",
+	"order": [
+		"95880137-db71-6027-ed92-4a42d2faa281"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1510677243574,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "95880137-db71-6027-ed92-4a42d2faa281",
+			"headers": "Content-Type: application/json\nx-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc0FkbWluIjp0cnVlLCJ1c2VySWQiOiI1YTBiMTFlY2ZlNzM1MzAwMTQ5NTM3ZjgiLCJpYXQiOjE1MTA2NzUwNjgsImV4cCI6MTUxMDY5MzA2OH0.8XKFJfgH40bza61W3KK0dDGtwuM6n3hQOlR82SIwYDs\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-access-token",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc0FkbWluIjp0cnVlLCJ1c2VySWQiOiI1YTBiMTFlY2ZlNzM1MzAwMTQ5NTM3ZjgiLCJpYXQiOjE1MTA2NzUwNjgsImV4cCI6MTUxMDY5MzA2OH0.8XKFJfgH40bza61W3KK0dDGtwuM6n3hQOlR82SIwYDs",
+					"description": ""
+				}
+			],
+			"url": "http://computer-shop.herokuapp.com/api/like",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "e33a2214-d51a-fa30-c59e-f428cbf21968",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Like - unlike - relike",
+			"description": "Single post to like and unlike and re-like",
+			"descriptionFormat": "html",
+			"time": 1510677258405,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"productId\" : \"5a0b156ffe735300149537fd\"\n}"
+		}
+	]
+}

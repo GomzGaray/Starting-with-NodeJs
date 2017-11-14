@@ -1,0 +1,126 @@
+{
+	"id": "935daccb-cd2e-f898-aa8b-9730b73d7b22",
+	"name": "Products",
+	"description": "",
+	"order": [
+		"f9f5a7a8-fda7-3b9f-8ec2-35a00faeeb23",
+		"fa550e23-b41a-a7f9-9ece-c219d46d87d2",
+		"f712b1fb-c1a1-172e-9df7-ddbfecb45c4b"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1510617240842,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "f712b1fb-c1a1-172e-9df7-ddbfecb45c4b",
+			"headers": "Content-Type: application/json\nx-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc0FkbWluIjp0cnVlLCJ1c2VySWQiOiI1YTBiMTFlY2ZlNzM1MzAwMTQ5NTM3ZjgiLCJpYXQiOjE1MTA2NzUwNjgsImV4cCI6MTUxMDY5MzA2OH0.8XKFJfgH40bza61W3KK0dDGtwuM6n3hQOlR82SIwYDs\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-access-token",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc0FkbWluIjp0cnVlLCJ1c2VySWQiOiI1YTBiMTFlY2ZlNzM1MzAwMTQ5NTM3ZjgiLCJpYXQiOjE1MTA2NzUwNjgsImV4cCI6MTUxMDY5MzA2OH0.8XKFJfgH40bza61W3KK0dDGtwuM6n3hQOlR82SIwYDs",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://computer-shop.herokuapp.com/api/Products",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "935daccb-cd2e-f898-aa8b-9730b73d7b22",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Get all products",
+			"description": "Getting all products in db with no filter",
+			"descriptionFormat": "html",
+			"time": 1510676761221,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"amount\" : 14,\n\t\"id\" : \"5a0b16c4fe73530014953813\"\n}"
+		},
+		{
+			"id": "f9f5a7a8-fda7-3b9f-8ec2-35a00faeeb23",
+			"headers": "Content-Type: application/json\nx-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc0FkbWluIjp0cnVlLCJ1c2VySWQiOiI1YTBiMTFlY2ZlNzM1MzAwMTQ5NTM3ZjgiLCJpYXQiOjE1MTA2NzUwNjgsImV4cCI6MTUxMDY5MzA2OH0.8XKFJfgH40bza61W3KK0dDGtwuM6n3hQOlR82SIwYDs\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-access-token",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc0FkbWluIjp0cnVlLCJ1c2VySWQiOiI1YTBiMTFlY2ZlNzM1MzAwMTQ5NTM3ZjgiLCJpYXQiOjE1MTA2NzUwNjgsImV4cCI6MTUxMDY5MzA2OH0.8XKFJfgH40bza61W3KK0dDGtwuM6n3hQOlR82SIwYDs",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://computer-shop.herokuapp.com/api/Products/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510676556045,
+			"name": "Updating amount of existing product",
+			"description": "Update amount",
+			"collectionId": "935daccb-cd2e-f898-aa8b-9730b73d7b22",
+			"responses": [],
+			"rawModeData": "{\n\t\"amount\" : 14,\n\t\"id\" : \"5a0b16c4fe73530014953813\"\n}"
+		},
+		{
+			"id": "fa550e23-b41a-a7f9-9ece-c219d46d87d2",
+			"headers": "Content-Type: application/json\nx-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc0FkbWluIjp0cnVlLCJ1c2VySWQiOiI1YTBiMTFlY2ZlNzM1MzAwMTQ5NTM3ZjgiLCJpYXQiOjE1MTA2NzUwNjgsImV4cCI6MTUxMDY5MzA2OH0.8XKFJfgH40bza61W3KK0dDGtwuM6n3hQOlR82SIwYDs\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-access-token",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc0FkbWluIjp0cnVlLCJ1c2VySWQiOiI1YTBiMTFlY2ZlNzM1MzAwMTQ5NTM3ZjgiLCJpYXQiOjE1MTA2NzUwNjgsImV4cCI6MTUxMDY5MzA2OH0.8XKFJfgH40bza61W3KK0dDGtwuM6n3hQOlR82SIwYDs",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://computer-shop.herokuapp.com/api/Products/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510676470672,
+			"name": "Add a new product",
+			"description": "Adding product",
+			"collectionId": "935daccb-cd2e-f898-aa8b-9730b73d7b22",
+			"responses": [],
+			"rawModeData": "{\n\t\"name\": \"Toshiba MicroSD 4GB\",\n    \"description\": \"Toshiba TransMemory U301 MicroSD 4GB class 4\",\n    \"amount\": 67,\n    \"price\": 2.59\n}"
+		}
+	]
+}
