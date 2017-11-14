@@ -1,7 +1,24 @@
-<h2>Products avalilables</h2>
+<br/><h2 class="view-title">Products avalilables</h2>
 <br/>
 <ul>
-    <li ng-repeat="product in products">
-        <span>{{product}}</span>
+    <li class="paginationclass" style="font-weight:bold;">
+        <span>Name</span><span>Price</span><span>Description</span>
+    </li>
+    <li class="paginationclass" ng-repeat="product in products | pagination: currentPage*pageSize | limitTo: pageSize">
+        <div><span>{{product.name}}</span><span>{{product.price}}</span><span>{{product.description}}</span></div>
     </li>
 </ul>
+
+<div class="pagination pagination-centered" ng-show="products.length">
+    <ul class="pagination-controle pagination">
+        <li>
+            <button type="button" class="btn btn-primary" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"> &lt; PREV</button>
+        </li>
+        <li>
+            <span>{{currentPage + 1}} of {{ numberOfPages() }}</span>
+        </li>
+        <li>
+            <button type="button" class="btn btn-primary" ng-disabled="currentPage >= products.length/pageSize - 1" ng-click="currentPage = currentPage+1">NEXT &gt;</button>
+        </li>
+    </ul>
+</div>

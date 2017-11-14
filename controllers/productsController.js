@@ -8,14 +8,13 @@ var mongoose        = require('mongoose'),
 exports.findAllProducts = function (request, response) {
     var filter = {};
     // if filter name added in query then filtering
-    if (request.params.name) {
-        filter.name = new RegExp(request.params.name, 'i');
+    if (request.query.name) {
+        filter.name = new RegExp(request.query.name, 'i');
     }
     // Filter when want to get only active or deleted products
-    if (request.params.status) {
-        filter.status = request.params.status;
+    if (request.query.status) {
+        filter.status = request.query.status;
     }
-
     // Searching in db and passing filter if exists
     Products.find(filter, function (error, prods) {
         if (!error) {
@@ -29,7 +28,7 @@ exports.findAllProducts = function (request, response) {
 
 // Get product by Identifier
 exports.findProductById = function (request, resp) {
-    Products.findById( request.params.id, function( err, prod ) {
+    Products.findById( request.query.id, function( err, prod ) {
         if (err){
             resp.status(500).send(err);
         } else if( prod ) {
@@ -42,7 +41,7 @@ exports.findProductById = function (request, resp) {
 
 // Get product by Identifier
 exports.removeProductById = function (request, resp) {
-    Products.findById( request.params.id, function( err, prod ) {
+    Products.findById( request.query.id, function( err, prod ) {
         if (err){
             resp.status(500).send(err);
         } else if( prod ) {

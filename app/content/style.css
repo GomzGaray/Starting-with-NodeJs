@@ -25,14 +25,42 @@
     margin-bottom: 25px;
 }
 
+ul .ng-scope {
+    list-style-type: none;
+}
 
 /* ComputerShop styles */
 .form-login {
     margin-left: 100px;
 }
 
-.login-title {
+.view-title {
     margin-top: 15px;
     color: #337ab7;
     margin-left: 60px;
+}
+
+.paginationclass {
+    margin: 19px 28px;
+    list-style-type: none;
+}
+
+.paginationclass span {
+    margin-left:15px;
+    display:inline-block;
+    width: 200px;
+    text-align: center;
+}
+
+.pagination-controle li {
+    display: inline-block;
+}
+
+.pagination-controle button {
+    font-size: 12px;
+    margin-top: -26px;
+    cursor:pointer;
+}
+.pagination {
+    margin:5px 150px !important;
 }
