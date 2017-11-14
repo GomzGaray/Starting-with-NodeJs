@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5a0af657bca3694fbc0bcf99"},"email":"email@user.com","password":"$2a$10$Txgg1VOuj7Fyw9DC2wkUBOlYFI7hTxo3xFPk4zE6xJlTGvFtR5QgW","name":"username","status":"Active","isAdmin":false,"__v":0}
+{"_id":{"$oid":"5a0afc37bca3694fbc0bcf9a"},"email":"user@gomez.com","password":"$2a$10$Txgg1VOuj7Fyw9DC2wkUBOlYFI7hTxo3xFPk4zE6xJlTGvFtR5QgW","name":"normal user","status":"Active","isAdmin":false,"__v":0}
+{"_id":{"$oid":"5a0afc8cbca3694fbc0bcf9b"},"email":"admin@gomez.com","password":"$2a$10$Txgg1VOuj7Fyw9DC2wkUBO.E50v/CJ7Y2zVthAeLZ9uAp/fBBvK8K","name":"Administrator","status":"Active","isAdmin":true,"__v":0}
+{"_id":{"$oid":"5a0afd64bca3694fbc0bcf9c"},"email":"herberth@gomez.com","password":"$2a$10$Txgg1VOuj7Fyw9DC2wkUBO09KrzYiqKwmZErij4qxm5wqR6XerWcO","name":"Herberth user","status":"Active","isAdmin":false,"__v":0}

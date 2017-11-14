@@ -1,0 +1,21 @@
+{"_id":{"$oid":"5a0a2c9b92ce2d3598347b17"},"name":"Usb","description":"Flash drive usb","amount":40,"price":12.5,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0a2cc292ce2d3598347b19"},"name":"Usb","description":"Flash drive usb","amount":14,"price":14,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0a30ceaca1d551b4ea4c0f"},"name":"car","description":"a nice and cool car","amount":20,"price":1500.69,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0b158bbca3694fbc0bcf9d"},"name":"Gigabyte GeForce GTX1070 G1 Gaming 8GB","description":"NVIDIA GeForce® GTX 1070 8.0 GB","amount":185,"price":459.69,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0b15fcbca3694fbc0bcf9f"},"name":"Samsung SSD 850 EVO (Basic) Series 500GB","description":"2.5 inches, SATA3, 500 GB, TLC","amount":185,"price":162.9,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0b163bbca3694fbc0bcfa1"},"name":"Samsung SSD Series 1TB","description":"2.5 inches, SATA3, 1TB, TLC SSD","amount":45,"price":382,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0b1e7cbca3694fbc0bcfa3"},"name":"Toshiba MicroSD 4GB","description":"Toshiba TransMemory U301 MicroSD 4GB class 4","amount":67,"price":2.59,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0b1e88bca3694fbc0bcfa5"},"name":"Toshiba MicroSD 2GB","description":"Toshiba TransMemory U301 MicroSD 2GB","amount":67,"price":2.59,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0b1e9fbca3694fbc0bcfa7"},"name":"Kingston MicroSD 2GB","description":"Kingston U301 MicroSD 2GB","amount":37,"price":3.59,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0b1eafbca3694fbc0bcfa9"},"name":"Kingston MicroSD 4GB","description":"Kingston U301 MicroSD 4GB class 4","amount":37,"price":4.59,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0b1eb9bca3694fbc0bcfab"},"name":"Kingston MicroSD 4GB","description":"Kingston U301 MicroSD 4GB class 10","amount":37,"price":6.59,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0b1eccbca3694fbc0bcfad"},"name":"Kingston MicroSD 8GB","description":"Kingston U301 MicroSD 8GB class 4","amount":37,"price":7.79,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0b1ed5bca3694fbc0bcfaf"},"name":"Kingston MicroSD 8GB","description":"Kingston U301 MicroSD 8GB class 10","amount":37,"price":9.89,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0b1f22bca3694fbc0bcfb1"},"name":"Kingston MicroSD 16GB","description":"Kingston U301 MicroSD 16GB class 4","amount":40,"price":15.89,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0b1f29bca3694fbc0bcfb3"},"name":"Kingston MicroSD 16GB","description":"Kingston U301 MicroSD 16GB class 10","amount":40,"price":18.89,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0b1f34bca3694fbc0bcfb5"},"name":"Kingston MicroSD 32GB","description":"Kingston U301 MicroSD 16GB class 4","amount":40,"price":25.89,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0b1f3cbca3694fbc0bcfb7"},"name":"Kingston MicroSD 32GB","description":"Kingston U301 MicroSD 16GB class 10","amount":40,"price":31.89,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0b1f4abca3694fbc0bcfb9"},"name":"Kingston MicroSD 64B","description":"Kingston U301 MicroSD 16GB class 4","amount":40,"price":49.89,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0b1f55bca3694fbc0bcfbb"},"name":"Kingston MicroSD 64B","description":"Kingston U301 MicroSD 16GB class 10","amount":40,"price":55,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0b1f6cbca3694fbc0bcfbd"},"name":"Kingston MicroSD 128B","description":"Kingston U301 MicroSD 128GB class 4","amount":40,"price":75,"status":"Active","__v":0}
+{"_id":{"$oid":"5a0b1f7bbca3694fbc0bcfbf"},"name":"Kingston MicroSD 128B","description":"Kingston U301 MicroSD 128GB class 10","amount":40,"price":89.62,"status":"Active","__v":0}
