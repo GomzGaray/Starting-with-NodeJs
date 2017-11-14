@@ -1,20 +1,28 @@
 <br/><h2 class="view-title">Login</h3>
 
-<br/><br/>
-<form class="form-login" ng-controller="LoginCtrl" ng-submit="signin()">
-    <div class="form-group row">
-        <div class=" col-md-3 col-sm-3 col-xs-3">
-            <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="email">
-        </div>
+<div ng-controller="LoginCtrl">
+    <div ng-show="loggedIn" class="alert alert-success">
+            <span>Logged In sucessfully</span>
     </div>
-    <div class="form-group row">
+    <div ng-show="loggedIn == false" class="alert alert-danger">
+        <span>{{errorMessage}}</span>
+    </div>
+    <br/><br/>
+    <form class="form-login"  ng-submit="signin()">
+        <div class="form-group row">
             <div class=" col-md-3 col-sm-3 col-xs-3">
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" ng-model="password">
+                <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="email">
+            </div>
         </div>
-    </div>
-    <div class="form-group row">
-            <div class=" col-md-3 col-sm-3 col-xs-3">
-        <button type="submit" class="btn btn-primary">Login</button>
+        <div class="form-group row">
+                <div class=" col-md-3 col-sm-3 col-xs-3">
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" ng-model="password">
+            </div>
         </div>
-    </div>
-</form>
+        <div class="form-group row">
+                <div class=" col-md-3 col-sm-3 col-xs-3">
+            <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+        </div>
+    </form>
+</div>

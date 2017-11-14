@@ -29,6 +29,10 @@ ul .ng-scope {
     list-style-type: none;
 }
 
+.alert {
+    margin: 20px 100px 20px 25px;
+}
+
 /* ComputerShop styles */
 .form-login {
     margin-left: 100px;

@@ -75,8 +75,11 @@ angular.module('computershopApp', ['ngRoute'] )
             password : $scope.password
         }).then( function (successResponse){
             // todo : add logic when login sucess
+            $scope.loggedIn  = successResponse.data.success;
         }, function (errorResponse){
             // todo : add logic when login failed
+            $scope.loggedIn = errorResponse.data.success;
+            $scope.errorMessage = errorResponse.data.message;
         });
     };
 })
