@@ -7,8 +7,6 @@ Computer-Shop
 - MongoDb
 - NodeJs
 
-## Demo can be visited [here](https://computer-shop.herokuapp.com)
-Please make sure to load unsafe scripts in your browser
 
 ## Running ComputerShop
 
