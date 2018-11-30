@@ -1,14 +1,14 @@
-# Computer Shop 
-
-Computer-Shop
+# Getting started with nodeJs
 
 
-**Requirements**
+This is an example of a Computer Shop made using NodeJs
+
+It uses:
 - MongoDb
 - NodeJs
 
 
-## Running ComputerShop
+## Steps to run site
 
 1. Before to run computershop application make sure your mongo db is running
 2. Go to the root directory
